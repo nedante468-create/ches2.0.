@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио — Веб-разработчик</title>
+  <meta name="description" content="Портфолио и сайт услуги веб-разработчика." />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade-in">
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">WD</div>
+      <div>
+        <div class="title">Чупахина Зарина</div>
+        <div class="subtitle">Веб-разработчик • Frontend & UI/UX</div>
+      </div>
+    </div>
+
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">Меню ☰</button>
+      <ul id="mainNav" class="menu">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#how">Как работаем</a></li>
+        <li><a href="#dedication">Посвящение</a></li>
+        <li><a href="#contact" class="cta">Заказать сайт</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+  <div>
+    <h1>Я создаю быстрые, доступные и красивые сайты</h1>
+    <p>Привет! Меня зовут Зарина. Я помогу воплотить вашу идею в сайт.</p>
+    <div class="actions">
+      <a href="#contact" class="cta">Связаться</a>
+      <a href="#projects" class="btn">Мои проекты</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="card">
+  <h2>Обо мне</h2>
+  <p>Создаю современные сайты, адаптивную верстку, frontend, UI/UX.</p>
+</section>
+
+<section id="projects">
+  <h2>Проекты</h2>
+  <div class="gallery">
+    <img src="https://picsum.photos/600/400?1">
+    <img src="https://picsum.photos/600/400?2">
+    <img src="https://picsum.photos/600/400?3">
+  </div>
+</section>
+
+<section id="how" class="card">
+  <h2>Как мы работаем</h2>
+  <ol>
+    <li>Бриф</li>
+    <li>Прототип</li>
+    <li>Разработка</li>
+    <li>Запуск</li>
+  </ol>
+</section>
+
+<section id="dedication" class="card dedication">
+  Спасибо всем, кто вдохновляет создавать красивые сайты ❤️
+</section>
+
+<section id="contact" class="card">
+  <h2>Связаться</h2>
+  <form>
+    <input type="text" placeholder="Ваше имя" required>
+    <input type="email" placeholder="Почта" required>
+    <textarea placeholder="Сообщение"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer">
+    <div>© 2025 Веб-разработчик</div>
+    <div>GitHub Portfolio</div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mainNav").classList.toggle("menu-show");
+}
+</script>
+
+</body>
+</html>
