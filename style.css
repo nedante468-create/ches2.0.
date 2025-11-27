@@ -1,0 +1,206 @@
+:root{
+  --accent:#0066ff;
+  --bg:#f7fafc;
+  --text:#0f172a;
+  --muted:#6b7280;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* АНИМАЦИЯ ПРИ ЗАГРУЗКЕ */
+.fade-in{
+  animation: fade 1.2s ease;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* HEADER */
+header{
+  background:white;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  width:40px;
+  height:40px;
+  background:var(--accent);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.menu{
+  display:flex;
+  list-style:none;
+  gap:15px;
+  transition:.4s;
+}
+
+.menu a{
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:8px;
+  transition:.3s;
+}
+
+.menu a:hover{
+  background:rgba(0,102,255,.1);
+  color:var(--accent);
+}
+
+.cta{
+  background:var(--accent);
+  color:white !important;
+}
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* ГЛАВНАЯ СЕКЦИЯ */
+.hero{
+  padding:60px 0;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+.actions{
+  margin-top:20px;
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  background:white;
+  padding:8px 14px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+/* КАРТОЧКИ */
+.card{
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  margin-top:20px;
+}
+
+/* ГАЛЕРЕЯ */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:10px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:10px;
+  transition:.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* ПОСВЯЩЕНИЕ */
+.dedication{
+  font-style:italic;
+}
+
+/* ФОРМА */
+form{
+  display:grid;
+  gap:10px;
+}
+
+input,textarea{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+button{
+  padding:10px;
+  background:var(--accent);
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* ✅ АНИМАЦИЯ МЕНЮ НА МОБИЛКЕ */
+@media(max-width:768px){
+
+  .menu{
+    display:none;
+    flex-direction:column;
+    background:white;
+    position:absolute;
+    right:20px;
+    top:70px;
+    width:200px;
+    padding:10px;
+    border-radius:12px;
+    animation: slide .4s ease;
+  }
+
+  .menu-show{
+    display:flex;
+  }
+
+  @keyframes slide{
+    from{opacity:0;transform:translateY(-15px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+}
